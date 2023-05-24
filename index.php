@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;300;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Registro de Factura</title>
+    <title>Factura Hunters</title>
     <script src="js/procesarfactura.js" defer></script>
 </head>
 
@@ -21,27 +21,26 @@
   <body>
     <header>
       <div class="container">
-        <?php include('scripts/header.php'); ?>
+        <?php include('Templates/header.php'); ?>
       </div>
-      
     </header>
-    <div class="container">
-      <h1>Registro de Factura</h1>
-    </div>
 
-    <h2>Encabezado de Factura</h2>
-    <form id="headerForm">
+      <div class="container">
+        <?php include('Templates/factura.php'); ?>
+      </div>
+
+    <!-- <form id="headerForm">
       <label for="invoiceNumber">Número de Factura:</label>
       <input type="text" id="invoiceNumber" name="invoiceNumber"><br>
 
       <label for="customerName">Nombre del Cliente:</label>
       <input type="text" id="customerName" name="customerName"><br>
 
-      <!-- Otros campos del encabezado de factura -->
+       Otros campos del encabezado de factura
       
       <button type="button" id="addHeader">Agregar Encabezado</button>
     </form>
-
+ -->
     <h2>Detalle de Factura</h2>
     <form id="detailForm">
       <label for="productName">Nombre del Producto:</label>
@@ -58,5 +57,11 @@
     <button type="button" onclick="submitForm()">Guardar Factura</button>
 
     <div id="result"></div>
+
+    <div class="container">
+        <?php include('Templates/resumenfactura.php'); ?>
+      </div>
+
+
   </body>
 </html>

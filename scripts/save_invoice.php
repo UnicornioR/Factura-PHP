@@ -7,6 +7,12 @@
   foreach ($headers as $header) {
     $invoiceNumber = $header['invoiceNumber'];
     $customerName = $header['customerName'];
+    $customerSurname = $header['customerSurname'];
+    $email = $header['email'];
+    $ciudad = $header['ciudad'];
+    $fecha = $header['fecha'];
+    $celular = $header['celular'];
+
     
     // Realiza las operaciones con los datos del encabezado de factura
     // (por ejemplo, guardar en la base de datos)
